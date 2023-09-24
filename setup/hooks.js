@@ -50,7 +50,7 @@ Before(async () => {
 After(async function (scenario) {
     console.log("STATUS: ", scenario.result.status);
     //if (scenario.result.status === 'PASSED') {
-    const file_path = `screenshots/Failed Scenario ${scenario.pickle.name}.png`;
+    const file_path = `screenshots/Scenario ${scenario.pickle.name}.png`;
     // Attach the screenshot path to the test result+
     var buffer = await global.page.screenshot({ path: file_path, fullPage: true });
     this.attach(buffer, 'image/png');
